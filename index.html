@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Milagre do Azeite - Templo Mapaf</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --primary-orange: #FF6600; /* Cor da chama da Logo */
+            --deep-gold: #D4AF37;
+            --dark-text: #222;
+            --light-bg: #FDF5E6; /* Bege suave */
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        /* --- CABEÇALHO (HERO) COM FUNDO TRANSLÚCIDO --- */
+        header {
+            position: relative;
+            height: 100vh; /* Ocupa a tela toda no celular */
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Camada da imagem de fundo (Viúva) com efeito escurecido */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('viúva_azeite.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: blur(2px); /* Leve desfoque para destacar o texto */
+        }
+
+        .logo-img {
+            max-width: 180px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            max-width: 600px;
+        }
+
+        /* --- SESSÃO DE CONTEÚDO (PROFETA E VIÚVA) --- */
+        .content-section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .text-block { flex: 1; min-width: 300px; }
+        .image-block { flex: 1; min-width: 300px; text-align: center; }
+        
+        .image-block img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 4px solid white;
+        }
+
+        h2 { color: var(--primary-orange); font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; }
+
+        /* --- CARTAZ OFICIAL --- */
+        .flyer-section {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .flyer-img {
+            max-width: 100%;
+            max-height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- FORMULÁRIO DE CAPTURA --- */
+        .form-container {
+            background: white;
+            max-width: 500px;
+            margin: -80px auto 0; /* Sobe por cima do header */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: #f9f9f9;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FF6600, #ff8c00);
+            color: white;
+            border: none;
+            padding: 18px;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4); }
+
+        /* --- RODAPÉ E LOCALIZAÇÃO --- */
+        footer {
+            background: #222;
+            color: #ddd;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .location-box {
+            background: #333;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-orange);
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .form-container { margin: 20px; }
+            header { height: auto; padding: 100px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="New_Logo_Mapaf-removebg-preview.png" alt="Ministério Apostólico Avivamento da Fé" class="logo-img">
+        
+        <h1>O Milagre do Azeite</h1>
+        <p class="subtitle">"Traga as suas vasilhas vazias, porque o azeite não vai parar."</p>
+        
+        <a href="#inscricao" style="color: white; border: 1px solid white; padding: 10px 20px; text-decoration: none; border-radius: 30px; margin-top: 20px; font-size: 0.9rem;">SAIBA MAIS 👇</a>
+    </header>
+
+    <div id="inscricao" class="form-container">
+        <h3 style="text-align: center; color: var(--primary-orange); margin-bottom: 10px;">Garanta seu lugar na Campanha</h3>
+        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 20px;">Entre no nosso grupo VIP e receba os devocionais.</p>
+        
+        <form action="https://formsubmit.co/seuemail@exemplo.com" method="POST">
+            <input type="hidden" name="_next" value="https://wa.me/5592SEUNUMERO?text=Vim%20pelo%20Site%20do%20Azeite">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <label style="font-size: 0.8rem; font-weight: bold;">Nome Completo</label>
+            <input type="text" name="nome" placeholder="Digite seu nome" required>
+
+            <label style="font-size: 0.8rem; font-weight: bold;">WhatsApp</label>
+            <input type="tel" name="whatsapp" placeholder="(92) 9XXXX-XXXX" required>
+
+            <button type="submit" class="cta-button">QUERO PARTICIPAR</button>
+        </form>
+    </div>
+
+    <section class="content-section">
+        <div class="image-block">
+            <img src="profeta_vúva.jpg" alt="Profeta Eliseu e a Viúva">
+        </div>
+        <div class="text-block">
+            <h2>7 Domingos de Provisão</h2>
+            <p>Muitas vezes, olhamos para a nossa dispensa e só enxergamos o que falta. Mas a fé não olha para a escassez, ela olha para a promessa.</p>
+            <br>
+            <p>No <strong>Templo Mapaf</strong>, viveremos dias de milagres. Assim como a viúva obedeceu a palavra do profeta e viu o pouco se multiplicar, Deus quer fazer o mesmo na sua casa no Nova Cidade.</p>
+            <br>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px;">✅ <strong>Quebra de Maldições</strong> Financeiras</li>
+                <li style="margin-bottom: 10px;">✅ <strong>Restauração</strong> da Esperança Familiar</li>
+                <li style="margin-bottom: 10px;">✅ <strong>Unção</strong> de Multiplicação</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="flyer-section">
+        <h3 style="margin-bottom: 30px; font-size: 1.5rem;">Divulgue essa Campanha</h3>
+        <img src="Campanha_Milagre do Azeite.jpg" alt="Cartaz Oficial O Milagre do Azeite" class="flyer-img">
+    </section>
+
+    <footer>
+        <img src="New_Logo_Mapaf-removebg-preview.png" alt="Logo" style="max-width: 100px; opacity: 0.7;">
+        
+        <div class="location-box">
+            <h4 style="color: var(--primary-orange); margin-bottom: 10px;">📍 LOCAL: TEMPLO MAPAF</h4>
+            <p>Av. Curaçao, 51 - Qd 6 - Nova Cidade - Manaus/AM</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #aaa;">(Próximo ao ponto de referência local)</p>
+        </div>
+
+        <p style="margin-top: 30px;">Início: <strong>01 de Março de 2026</strong></p>
+        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">&copy; 2026 Ministério Apostólico Avivamento da Fé</p>
+    </footer>
+
+</body>
+</html>
