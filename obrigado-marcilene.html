@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Confirmada - O Milagre do Azeite</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #FF6600;
+            --dark-grey: #333;
+            --light-bg: #FDF5E6;
+            --success-green: #25D366;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--light-bg); 
+            color: var(--dark-grey); 
+            text-align: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            flex-direction: column; 
+            padding: 20px;
+        }
+        
+        .logo-img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .card { 
+            background: white; 
+            width: 100%;
+            max-width: 500px; 
+            padding: 40px 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            animation: slideUp 0.6s ease-out;
+        }
+
+        /* Animação suave de entrada */
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .icon-circle {
+            width: 80px; height: 80px;
+            background-color: rgba(37, 211, 102, 0.15);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .check-icon {
+            color: var(--success-green);
+            font-size: 40px;
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--primary-orange); 
+            margin-bottom: 10px; 
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+        
+        p { font-size: 1.05rem; line-height: 1.6; color: #555; }
+        
+        .destaque {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-orange);
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: 600;
+            color: #222;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .whatsapp-btn {
+            background-color: var(--success-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: block;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            font-size: 1.1rem;
+        }
+        
+        .whatsapp-btn:hover { 
+            transform: scale(1.03); 
+            background-color: #128C7E; 
+        }
+
+        .footer { margin-top: 30px; font-size: 0.85rem; color: #888; }
+    </style>
+</head>
+<body>
+
+    <img src="New Logo Mapaf.png" alt="Ministério Apostólico Avivamento da Fé" class="logo-img">
+
+    <div class="card">
+        <div class="icon-circle">
+            <span class="check-icon">✔</span>
+        </div>
+        
+        <h1>Inscrição Confirmada!</h1>
+        <p>Sua vasilha já está preparada. Agradecemos por dar este passo de fé rumo ao milagre.</p>
+        
+        <div class="destaque">
+            ⚠️ ATENÇÃO: Falta apenas um passo!
+        </div>
+        
+        <p>Para receber os materiais, devocionais e o lembrete da nossa campanha, é fundamental que você entre no nosso canal do WhatsApp.</p>
+
+        <a href="https://wa.me/55999065697?text=Olá,%20fiz%20minha%20inscrição%20na%20Campanha%20do%20Azeite!" class="whatsapp-btn">
+            ENTRAR NO WHATSAPP AGORA ➜
+        </a>
+    </div>
+
+    <div class="footer">
+        Templo Mapaf - Nova Cidade, Manaus/AM<br>
+        Início: 01 de Março de 2026
+    </div>
+
+</body>
+</html>
